@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sub_title">28sp</dimen>
+    <dimen name="temperature">60sp</dimen>
+    <dimen name="title">25sp</dimen>
+    <dimen name="basic_info_title">14sp</dimen>
+</resources>

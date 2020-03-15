@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherForecastApp</string>
+    <string name="degree_celsius_symbol">°C</string>
+
+</resources>
