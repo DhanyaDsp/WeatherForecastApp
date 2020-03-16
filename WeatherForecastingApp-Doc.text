@@ -1,0 +1,19 @@
+Architecture: MVVM
+Language : Kotlin
+
+This application is help know the weather condition of the current location. The app will be sending the user location details to the API and fetch the details. It will be shows in user’s dashboard. The API call only supposed to call whenever network connects to Wi-Fi.
+The information is saved into the database once it fetched from API for the first time. Every 2 ours it will be called and update into the DB.
+Future Updates of the app : 
+1.	Choose any city and get the weather information.
+2.	Share or export the weather info as an image
+3.	User can able to update weather reviews
+4.	User can manage create his profile and account
+The below are the technical details about this App.
+Application supports from android version 6 to 10.
+Kotlin version – 1.3.5
+App version – 1.0
+1.	API Service call: Used Retrofit as the Networking Library & updated the UI with the server response
+2.	Persist in Database: Used Room Database
+3.	Current Location: Fetch the current location using FusedLocationProviderClient and updated in the UI.
+4.	Wi-Fi Data : Used Wi-Fi Manager to set the connectivity as Wi-Fi network.
+5.	Schedule Http call : Completed the code but not working. Used JobScheduler.
