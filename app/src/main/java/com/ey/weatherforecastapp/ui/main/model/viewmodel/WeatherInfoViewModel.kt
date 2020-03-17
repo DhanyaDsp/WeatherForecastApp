@@ -1,5 +1,6 @@
 package com.ey.weatherforecastapp.ui.main.model.viewmodel
 
+import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ey.weatherforecastapp.ui.main.model.WeatherInfoInterface
@@ -18,6 +19,7 @@ class WeatherInfoViewModel : ViewModel() {
     val progressBarLiveData = MutableLiveData<Boolean>()
     val weatherInfoLiveData = MutableLiveData<WeatherData>()
 
+    var application: Application? = null
 
     fun getWeatherInfo(cityId: Int, model: WeatherInfoInterface) {
 

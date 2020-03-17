@@ -1,8 +1,7 @@
 package com.ey.weatherforecastapp.ui.main.model
 
 import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
+import android.net.wifi.WifiManager
 import android.util.Log
 import android.widget.Toast
 import com.ey.weatherforecastapp.ui.main.model.data.WeatherInfoResponse
@@ -60,23 +59,18 @@ class WeatherInfoImpl(private val context: Context) : WeatherInfoInterface {
                 }
             })
         } else {
-            Toast.makeText(context, "Please Connect your network to wifi ", Toast.LENGTH_LONG)
+            Toast.makeText(context, "Please Connect your network to Wi-Fi", Toast.LENGTH_LONG)
                 .show()
         }
 
     }
 
     private fun isConnectedToWifi(context: Context): Boolean {
-        val connMgr = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkInfo = connMgr.allNetworkInfo
-        for (i in networkInfo.indices){
-            if (networkInfo[i].type == ConnectivityManager.TYPE_WIFI) {
-                Log.d("sos","networkInfo ${networkInfo[i].type}")
-                return true
-            }
-        }
-
-        return false
+        var status = false
+        val wifiManager = this.context.getSystemService(Context.WIFI_SERVICE) as WifiManager
+         status=wifiManager.isWifiEnabled
+        Log.d("sos","network status* $status")
+        return status
 
     }
 }

@@ -17,7 +17,9 @@
 @file:JvmName("Constants")
 @file:Suppress("PropertyName")
 
-package com.example.android.jobscheduler
+package com.ey.weatherforecastapp.ui.main.utils
+
+import com.ey.weatherforecastapp.BuildConfig
 
 @JvmField val MSG_UNCOLOR_START = 0
 @JvmField val MSG_UNCOLOR_STOP = 1
